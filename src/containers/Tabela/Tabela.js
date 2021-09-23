@@ -11,13 +11,13 @@ const Tabela = () => {
     const [moedas, setMoedas] = useState([]);
 
     const getCrypto = async () =>{
-        const response = await axios.get('http://localhost:5000/crypto')
+        const response = await axios.get('https://sheik-coins-api.herokuapp.com/crypto')
         const lista = Array.from(response.data)
         setMoedas(lista)
         
     } 
     const addMoedaPortfolio = async (id, nome) =>{
-        const response = await axios.post('http://localhost:5000/portfolio', {
+        const response = await axios.post('https://sheik-coins-api.herokuapp.com/portfolio', {
             moedaId:id,
             userId:user.id
         })

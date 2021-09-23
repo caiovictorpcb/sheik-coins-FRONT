@@ -15,7 +15,7 @@ const Signup = () => {
   const { login } = React.useContext(UserContext)
 
   const newUser = async (values) =>{
-    const response = await axios.post(`http://localhost:5000/users`, values)
+    const response = await axios.post(`https://sheik-coins-api.herokuapp.com/`, values)
     if(response){
       message.success('CADASTRADO COM SUCESSO')
       history.push('/')

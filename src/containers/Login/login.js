@@ -14,7 +14,7 @@ const Login = () =>{
   const { login } = React.useContext(UserContext)
 
     const loginUser = async (values) =>{
-      const response = await axios.post(`http://localhost:5000/login`, values)
+      const response = await axios.post(`https://sheik-coins-api.herokuapp.com/login`, values)
      if(response.data.error){
         message.error('EMAIL/SENHA INCORRETOS', 3);
      } 
