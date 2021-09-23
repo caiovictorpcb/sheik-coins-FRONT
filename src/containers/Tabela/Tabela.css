@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.tabela{
+    width: 1365px;
+}
+.ant-statistic-content-prefix{
+    margin-right: 1px;
+}

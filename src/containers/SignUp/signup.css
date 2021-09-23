@@ -1,0 +1,33 @@
+body{
+    background-color: #F5F5F5;
+}
+
+#container{
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ant-form{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #40A9FF;
+    padding-left:30px;
+    padding-right:50px;
+    padding-top:50px;
+    padding-bottom:30px;
+    background-color: white;
+    border-radius: 7px;
+    width: 400px;
+}
