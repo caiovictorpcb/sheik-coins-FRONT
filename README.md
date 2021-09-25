@@ -1,4 +1,5 @@
-# <img align="center" height="40" width="40" src="https://images.vexels.com/media/users/3/130123/isolated/preview/451253d81a55a06cc55363c70acf09b3-circulo-amarelo-do-cifrao.png"> SheikCoins
+# <img align="center" height="40" width="40" src="https://images.vexels.com/media/users/3/130123/isolated/preview/451253d81a55a06cc55363c70acf09b3-circulo-amarelo-do-cifrao.png"> <a href="https://sheik-coins-front.vercel.app/">SheikCoins</a>
+
 
 # O que é
 
@@ -10,7 +11,7 @@ SheikCoins conta com um sistema de monitoramento de cryptomoedas, com uma api pr
 
 # Como funciona 
 
-Ao acessar o site, o front-end faz a requisição via HTTP <a href="https://github.com/caiovictorpcb/sheik-coins-API">`para a própria API do SheikCoins`</a>, que faz outra requisição à API do <a href="https://www.coingecko.com/pt/api/documentation?">CoinGecko</a>, trata os dados, e devolve para o front-end feito com Reactjs + AntDesign.
+Ao acessar o site, o front-end faz a requisição via HTTP para a própria <a href="https://github.com/caiovictorpcb/sheik-coins-API">`API do SheikCoins`</a>, que faz outra requisição à API do <a href="https://www.coingecko.com/pt/api/documentation?">CoinGecko</a>, trata os dados, e devolve para <a href="https://github.com/caiovictorpcb/sheik-coins-FRONT">`front-end feito com Reactjs + AntDesign`</a>.
 
 # Uso 
 
@@ -36,3 +37,5 @@ Página com formulário de login, que valida todos os campos e em seguida consul
 Após o usuário ser autorizado, ele é redirecionado para a homepage, podendo agora adicionar moedas ao seu portfólio e vê-lo.
 
 ![image](https://user-images.githubusercontent.com/77304049/134781249-b4a4fb93-6dd5-4918-a1cc-64c2ac603bc1.png)
+
+https://sheik-coins-front.vercel.app/
