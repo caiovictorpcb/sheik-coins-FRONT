@@ -12,6 +12,20 @@ SheikCoins conta com um sistema de monitoramento de cryptomoedas, com uma api pr
 
 Ao acessar o site, o front-end faz a requisição via HTTP <a href="https://github.com/caiovictorpcb/sheik-coins-API">`para a própria API do SheikCoins`</a>, que faz outra requisição à API do <a href="https://www.coingecko.com/pt/api/documentation?">CoinGecko</a>, trata os dados, e devolve para o front-end feito com Reactjs + AntDesign.
 
-## Uso 
+# Uso 
 
-# Home
+## Home
+
+Primeira "página" do site, com botões que o redirecionam para a área de Login e Cadastro. 
+![image](https://user-images.githubusercontent.com/77304049/134780892-d7515da1-cfae-4299-89f3-80d87ce3391b.png)
+
+## SignUp
+
+Página com formuário de cadastro, que valida todos os campos, e cadastra um novo usuário no Banco de Dados.
+![image](https://user-images.githubusercontent.com/77304049/134781008-6f7ffb3a-714a-4e50-b750-296c5ac93d9b.png)
+
+
+## Login
+
+Página com formulário de login, que valida todos os campos e em seguida consulta o Banco de Dados, autenticando e autorizando o usuário.
+![image](https://user-images.githubusercontent.com/77304049/134781142-98a89e40-9c1e-4ee3-a5e8-d0fe7511b495.png)
