@@ -32,3 +32,5 @@ Página com formuário de cadastro, que valida todos os campos, e cadastra um no
 Página com formulário de login, que valida todos os campos e em seguida consulta o Banco de Dados, autenticando e autorizando o usuário.
 
 ![image](https://user-images.githubusercontent.com/77304049/134781142-98a89e40-9c1e-4ee3-a5e8-d0fe7511b495.png)
+
+Após o usuário ser autorizado, ele é redirecionado para a homepage, podendo agora adicionar moedas ao seu portfólio e vê-lo.
