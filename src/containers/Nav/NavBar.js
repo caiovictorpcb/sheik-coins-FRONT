@@ -25,7 +25,7 @@ const NavBar = () => {
                         <Button key='3'href='/signup' type='primary'>Sign Up</Button>   
                     </> 
                     : 
-                    <><Space size={800}>
+                    <><Space size={750}>
                             <Button key='1'onClick={() =>{history.push('/portfolio')}} icon={<BookFilled />} shape='round' >Portfolio</Button>
                             <span> Olá {user?.nome}</span>
                         </Space>
