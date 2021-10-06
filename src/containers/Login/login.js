@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { UserContext } from '../../contexts/usercontext'
 import { LoadingOutlined } from '@ant-design/icons';
 import { useState } from 'react'
+import authService from '../../services/authService'
 
 const Login = () =>{
   
@@ -14,14 +15,14 @@ const Login = () =>{
   const { login } = React.useContext(UserContext)
 
     const loginUser = async (values) =>{
-      const response = await axios.post(`https://sheik-coins-api.herokuapp.com/login`, values)
-     if(response.data.error){
-        message.error('EMAIL/SENHA INCORRETOS', 3);
-     } 
-     else{
-        login(response)
+      const {token, user} = await authService.loginUser(values.email, values.senha)
+      if(token && user){
+        login(token, user)
         history.push('/')
-     }
+      }
+      else{
+        message.error('EMAIL/SENHA INCORRETOS', 3);
+      }
     }
 
 

@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import { useHistory } from 'react-router' 
 import { UserContext } from '../../contexts/usercontext'
+import authService from '../../services/authService'
 
 
 
@@ -15,8 +16,8 @@ const Signup = () => {
   const { login } = React.useContext(UserContext)
 
   const newUser = async (values) =>{
-    const response = await axios.post(`https://sheik-coins-api.herokuapp.com/`, values)
-    if(response){
+    const data = await authService.signUpUser(values.nome, values.email, values.senha)
+    if(data === "CADASTRADO"){
       message.success('CADASTRADO COM SUCESSO')
       history.push('/')
     }

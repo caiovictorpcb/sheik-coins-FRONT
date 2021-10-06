@@ -25,9 +25,9 @@ const NavBar = () => {
                         <Button key='3'href='/signup' type='primary'>Sign Up</Button>   
                     </> 
                     : 
-                    <><Space size={760}>
+                    <><Space size={800}>
                             <Button key='1'onClick={() =>{history.push('/portfolio')}} icon={<BookFilled />} shape='round' >Portfolio</Button>
-                            <span> Olá {user.nome}</span>
+                            <span> Olá {user?.nome}</span>
                         </Space>
                     </>,
                 <Search placeholder="Procurar crypto-moeda" style={{ width: 200 }} />

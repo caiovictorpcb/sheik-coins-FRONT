@@ -5,35 +5,28 @@ import "antd/dist/antd.css";
 import "./Tabela.css"
 import { UserContext } from '../../contexts/usercontext'
 import { PlusOutlined } from '@ant-design/icons';
+import cryptoService from '../../services/cryptoService';
+import portfolioService from '../../services/portfolioService';
 const Tabela = () => {
 
-    const { logged, user } = React.useContext(UserContext)
-    const [moedas, setMoedas] = useState([]);
+    const { logged, user, jwt } = React.useContext(UserContext)
+    const [moedas, setMoedas] = useState([]);  
 
-    const getCrypto = async () =>{
-        const response = await axios.get('https://sheik-coins-api.herokuapp.com/crypto')
-        const lista = Array.from(response.data)
-        setMoedas(lista)
-        
-    } 
-    const addMoedaPortfolio = async (id, nome) =>{
-        const response = await axios.post('https://sheik-coins-api.herokuapp.com/portfolio', {
-            moedaId:id,
-            userId:user.id
-        })
-        if(response.data === 'POSSE CADASTRADA'){
-            message.success(`MOEDA COM NOME ${nome.toUpperCase()} ADICIONADA NO PORTFOLIO.`)
+    const addMoedaPortfolio = async (moedaId, userId, moedaNome) =>{
+       const added = await portfolioService.newPosse(moedaId, userId)
+        if(added === 'POSSE CADASTRADA'){
+            message.success(`MOEDA COM NOME ${moedaNome.toUpperCase()} ADICIONADA NO PORTFOLIO.`)
         }
         else{
             message.error('ERRO AO CADASTRAR MOEDA NO PORTFOLIO')
         }
     }
 
-    useEffect(() => {
-        getCrypto()
+    useEffect(async () => { 
+        const lista = await cryptoService.getCrypto()   
+        setMoedas(lista)
     },[]) 
 
-    const data = []
     const columns = [{
         title:'#',
         dataIndex:'key'
@@ -80,7 +73,7 @@ const Tabela = () => {
     {
         title:'',
         render:(moeda) =>(
-            <Button type="primary" shape="round" icon={<PlusOutlined/>} size='middle'onClick={()=> addMoedaPortfolio(moeda.id, moeda.nome)}>
+            <Button type="primary" shape="round" icon={<PlusOutlined/>} size='middle'onClick={()=> addMoedaPortfolio(moeda.id, user?.id, moeda.nome)}>
             </Button>
         )
     }
@@ -88,15 +81,11 @@ const Tabela = () => {
     {}
 ]
 
-    for(var i =0;i<moedas.length;i++){
-        data.push({key:i+1, id:moedas[i].id, img:moedas[i].img, nome:moedas[i].nome, simbolo:moedas[i].symbol, preco:moedas[i].preco, mktcap:moedas[i].mktcap})
-    }
-
         return(
             
             <div className='container'>
                 <div className='tabela'>
-                    <Table dataSource={data} columns={columns} pagination={false} size='middle' /> 
+                    <Table dataSource={moedas} columns={columns} pagination={false} size='middle' /> 
                 </div>
             </div>
         )
