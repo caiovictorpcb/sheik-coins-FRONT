@@ -6,12 +6,11 @@ class AuthService {
 
     loginUser = async (email, senha) => {
         const {data} = await AuthAPI.post("/login", {email, senha})
-        const token = data.data.token
-        const user = data.data.user
-        if(token && user)
-            return {
-                token,user
-            }
+        if(data.data){
+            const token = data?.data.token
+            const user = data?.data.user 
+        return{token,user}    
+        }
         else{
             return  false
         }
