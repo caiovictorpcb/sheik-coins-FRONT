@@ -7,10 +7,6 @@ import { useHistory } from 'react-router'
 import { UserContext } from '../../contexts/usercontext'
 import authService from '../../services/authService'
 
-
-
-
-
 const Signup = () => {
   const history = useHistory()
   const { login } = React.useContext(UserContext)
@@ -18,14 +14,15 @@ const Signup = () => {
   const newUser = async (values) =>{
     const data = await authService.signUpUser(values.nome, values.email, values.senha)
     if(data === "CADASTRADO"){
-      message.success('CADASTRADO COM SUCESSO')
-      history.push('/')
+      const {token, user} = await authService.loginUser(values.email, values.senha)
+      if(token && user){
+        login(token, user)
+        history.push('/')
+      }
     }
     else{
       message.error('ERRO')
-    }
-
-  }
+    }}
 
     return(
       <div id='container'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css'
-import { Form, Input, Checkbox, Button, Image, message } from'antd'
+import { Form, Input, Checkbox, Button, Image, message, Typography } from'antd'
 import axios from 'axios'
 import { Redirect, useHistory } from 'react-router'
 import { Link } from 'react-router-dom'

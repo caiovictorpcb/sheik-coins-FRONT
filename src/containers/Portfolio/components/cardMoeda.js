@@ -7,7 +7,6 @@ import portfolioService from '../../../services/portfolioService'
 import Portfolio from '../portfolio'
 
 const CardMoeda = (props) =>{
-    const {user} = React.useContext(UserContext)
     const { Meta } = Card;
     const [moeda, setMoeda] = useState()    
     
@@ -32,7 +31,10 @@ const CardMoeda = (props) =>{
 >
             <div>
               <span><Statistic title="Preço" value={moeda?.market_data.current_price.usd} precision={2} prefix='$' /></span>
-              <span><Statistic suffix='%'precision={3} valueStyle={{fontSize:17, color:moeda?.market_data.price_change_percentage_24h > 0 ? '#00a000' : '#ff0000'}}value={moeda?.market_data.price_change_percentage_24h}/></span>
+              <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+                <span><Statistic suffix='%'precision={3} valueStyle={{fontSize:17, color:moeda?.market_data.price_change_percentage_24h > 0 ? '#00a000' : '#ff0000'}}value={moeda?.market_data.price_change_percentage_24h}/></span>
+                <span style={{marginLeft:8, color:'grey'}}>7D</span>
+              </div>
               </div>
         </Card>
         </>

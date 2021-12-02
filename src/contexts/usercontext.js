@@ -16,19 +16,22 @@ const UserContextProvider = (props) =>{
     },[logged])
 
 
-    const setCredentials = (token, usuario) => {
+    const setCredentials = (token, usuario, logged) => {
             localStorage.setItem('jwt', JSON.stringify(token));
             localStorage.setItem('user', JSON.stringify(usuario))
-            localStorage.setItem('logged', true)
+            localStorage.setItem('logged', logged)
+    }
+    const logout = () => {
+        localStorage.clear()
     }
 
     const login = (token, user) =>{
         setLogged(true)
-        setCredentials(token, user)
+        setCredentials(token, user, true)
     }
 
     return(
-        <UserContext.Provider value={{jwt, user, logged, login}}>
+        <UserContext.Provider value={{jwt, user, logged, login, logout}}>
             {props.children}
         </UserContext.Provider>
         )
