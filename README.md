@@ -31,7 +31,7 @@ Primeira página do site com as principais criptomoedas e com botões que o redi
 
 ## SignUp
 
-Página com formuário de cadastro, que valida todos os campos, e cadastra um novo usuário no Banco de Dados.
+Página com formuário de cadastro, que valida todos os campos, cadastra um novo usuário no Banco de Dados e faz o login automático.
 
 ![image](https://user-images.githubusercontent.com/77304049/134781008-6f7ffb3a-714a-4e50-b750-296c5ac93d9b.png)
 
