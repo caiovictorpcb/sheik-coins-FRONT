@@ -24,7 +24,7 @@ Ao acessar o site, o front-end faz a requisição via HTTP para a própria <a hr
 
 ## Home
 
-Primeira página do site, com botões que o redirecionam para a área de Login e Cadastro. 
+Primeira página do site com as principais criptomoedas e com botões que o redirecionam para a área de Login e Cadastro. 
 
 ![home](https://user-images.githubusercontent.com/77304049/144460125-bd8c42b4-6850-4fff-a823-9928cc21a033.png)
 
@@ -42,7 +42,7 @@ Página com formulário de login, que valida todos os campos e em seguida consul
 
 ![image](https://user-images.githubusercontent.com/77304049/134781142-98a89e40-9c1e-4ee3-a5e8-d0fe7511b495.png)
 
-Após o usuário ser autorizado, ele é redirecionado para a homepage, podendo agora adicionar moedas ao seu portfólio e vê-lo.
+Após o usuário ser autorizado, ele é redirecionado para a homepage, podendo agora adicionar moedas ao seu portfólio e abri-lo.
 
 ![main](https://user-images.githubusercontent.com/77304049/144460223-1303c89e-85dc-465c-b538-9dcfd3eb7221.png)
 
