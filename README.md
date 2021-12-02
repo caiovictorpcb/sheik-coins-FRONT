@@ -24,7 +24,7 @@ Ao acessar o site, o front-end faz a requisição via HTTP para a própria <a hr
 
 ## Home
 
-Primeira "página" do site, com botões que o redirecionam para a área de Login e Cadastro. 
+Primeira página do site, com botões que o redirecionam para a área de Login e Cadastro. 
 
 ![image](https://user-images.githubusercontent.com/77304049/134780892-d7515da1-cfae-4299-89f3-80d87ce3391b.png)
 
