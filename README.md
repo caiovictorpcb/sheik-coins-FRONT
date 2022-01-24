@@ -10,7 +10,7 @@
 
 # O que é
 
-SheikCoins é um website inspirado em sites de compra e venda de cryptomoedas, e seu objetivo é monitorar as principais moedas do mercado.
+SheikCoins é um website inspirado em sites de compra e venda de cryptomoedas, e seu objetivo é permitir o usuário a monitorar as principais moedas do mercado, podendo adicionar suas moedas "favoritas" em seu portfólio.
 
 # O que faz
 
