@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const CryptoAPI = axios.create({baseURL: "https://sheik-coins-api.herokuapp.com/crypto"})
+const CryptoAPI = axios.create({baseURL: "https://sheik-coins-api.vercel.app/crypto"})
 
 class CryptoService {
 

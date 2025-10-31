@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const AuthAPI = axios.create({baseURL: "https://sheik-coins-api.herokuapp.com/auth"})
+const AuthAPI = axios.create({baseURL: "https://sheik-coins-api.vercel.app/auth"})
 
 class AuthService {
 

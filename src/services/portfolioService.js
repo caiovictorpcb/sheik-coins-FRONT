@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const PortfolioAPI = axios.create({baseURL: "https://sheik-coins-api.herokuapp.com/portfolio"})
+const PortfolioAPI = axios.create({baseURL: "https://sheik-coins-api.vercel.app/portfolio"})
 
 class PortfolioService {
 
@@ -19,7 +19,7 @@ class PortfolioService {
      }
 
     newPosse = async (moedaId, userId) =>{
-        const {data} = await axios.post('https://sheik-coins-api.herokuapp.com/portfolio', {
+        const {data} = await PortfolioAPI.post('/', {
             moedaId,
             userId
         })
@@ -27,7 +27,7 @@ class PortfolioService {
     }
     
     deletePosse = async (moedaId, userId) =>{
-        const {data} = await axios.post('https://sheik-coins-api.herokuapp.com/portfolio/delete', {
+        const {data} = await PortfolioAPI.post('/delete', {
             moedaId,
             userId
         })
